@@ -1,118 +1,162 @@
 [
   {
-    "slug": "account-research-brief",
+    "slug": "hubspot-account-research-brief",
     "title": "Account Research Brief",
-    "category": "Prospecting & Research",
-    "summary": "Turn a company name into a structured, one-page research brief before outreach or a first call.",
-    "trigger": "Before first outreach or a discovery call with a new account.",
-    "inputs": "Company name and website; optionally the Visma product you're selling.",
-    "owner": "GTM Enablement",
+    "category": "Prospecting",
+    "summary": "Builds a structured pre-call account brief by combining live HubSpot CRM data with web-search enrichment — never CRM alone.",
+    "trigger": "Before a first call, a qualification meeting, or reviving a stale account.",
+    "inputs": "A company name, HubSpot company ID, or contact name.",
+    "owner": "Karina Pakule - Technology transformation team",
     "updated": "2026-08-13",
     "tags": [
       "research",
       "prospecting",
       "account planning",
-      "discovery"
+      "discovery",
+      "hubspot",
+      "spiced"
     ]
   },
   {
-    "slug": "cold-outreach-email",
-    "title": "Cold Outreach Email",
+    "slug": "company-context",
+    "title": "Company Context (Template)",
+    "category": "Foundations",
+    "summary": "Foundational reference holding your company's product, ICP, buyer personas, value proposition, and SPICED alignment — fill it in once per company so every skill sounds like it understands the business.",
+    "trigger": "Loaded automatically before any content-generating skill (emails, briefs, prep, notes).",
+    "inputs": "None — a reference skill you customise once per company.",
+    "owner": "Karina Pakule - Technology transformation team",
+    "updated": "2026-08-13",
+    "tags": [
+      "foundation",
+      "company context",
+      "icp",
+      "personas",
+      "value prop",
+      "spiced"
+    ]
+  },
+  {
+    "slug": "hubspot-contact-role-mapper",
+    "title": "Contact Role Mapper",
+    "category": "Prospecting",
+    "summary": "Maps every contact at an account to buying-committee roles (Champion, Economic Buyer, Technical Evaluator, Blocker, User) and flags coverage gaps.",
+    "trigger": "On multi-stakeholder deals (3+ contacts), before a deal review or proposal.",
+    "inputs": "A company name/ID or a deal name/ID.",
+    "owner": "Karina Pakule - Technology transformation team",
+    "updated": "2026-08-13",
+    "tags": [
+      "buying committee",
+      "stakeholders",
+      "spiced",
+      "deals",
+      "coverage",
+      "hubspot"
+    ]
+  },
+  {
+    "slug": "hubspot-daily-action-digest",
+    "title": "Daily Action Digest",
+    "category": "Productivity",
+    "summary": "Pulls your open tasks, overdue activities, and stale deals and ranks them by deal value × urgency into a prioritised daily list.",
+    "trigger": "First thing in the morning, or any time you want a prioritised to-do view.",
+    "inputs": "None — uses your logged-in HubSpot owner (or a named rep, for managers).",
+    "owner": "Karina Pakule - Technology transformation team",
+    "updated": "2026-08-13",
+    "tags": [
+      "productivity",
+      "tasks",
+      "pipeline",
+      "prioritisation",
+      "revops",
+      "hubspot"
+    ]
+  },
+  {
+    "slug": "hubspot-deal-summary-updater",
+    "title": "Deal Summary & Next-Step Updater",
+    "category": "CRM Hygiene",
+    "summary": "Reads a deal and writes a concise 3-sentence summary plus a recommended next step back to HubSpot after your confirmation.",
+    "trigger": "Weekly on active deals, to keep pipeline records current.",
+    "inputs": "A deal name, company name, or HubSpot deal ID.",
+    "owner": "Karina Pakule - Technology transformation team",
+    "updated": "2026-08-13",
+    "tags": [
+      "crm hygiene",
+      "deals",
+      "pipeline",
+      "next step",
+      "spiced",
+      "hubspot"
+    ]
+  },
+  {
+    "slug": "hubspot-followup-email-generator",
+    "title": "Follow-up Email Generator",
     "category": "Outreach",
-    "summary": "Write a short, relevant first-touch cold email that earns a reply — not a pitch dump.",
-    "trigger": "When starting an outbound sequence to a new contact.",
-    "inputs": "Who you're emailing, what you sell, and one relevant reason for reaching out now.",
-    "owner": "GTM Enablement",
+    "summary": "Drafts a personalised, SPICED-informed follow-up email from live CRM context and saves it as a sendable Gmail draft.",
+    "trigger": "After a meeting, call, or touchpoint with a contact or deal.",
+    "inputs": "A contact name, deal, or company that has recent CRM activity.",
+    "owner": "Karina Pakule - Technology transformation team",
     "updated": "2026-08-13",
     "tags": [
       "outreach",
-      "cold email",
-      "sequences",
-      "copywriting"
+      "follow-up",
+      "email",
+      "gmail",
+      "spiced",
+      "hubspot"
     ]
   },
   {
-    "slug": "deal-risk-review",
-    "title": "Deal Risk Review",
-    "category": "RevOps",
-    "summary": "Assess a deal for stall and slippage risk, with reason codes and a recommended intervention.",
-    "trigger": "During pipeline reviews or before forecasting a deal as commit.",
-    "inputs": "The deal's stage, dates, activity history, and notes.",
-    "owner": "RevOps",
+    "slug": "hs-api-best-practices",
+    "title": "HubSpot API Best Practices",
+    "category": "Foundations",
+    "summary": "Reference guide for writing reliable, well-formatted content to HubSpot via MCP — HTML formatting, associations, enums, timestamps.",
+    "trigger": "Consulted by any skill before it writes a note, task, call, or email to HubSpot.",
+    "inputs": "None — reference skill.",
+    "owner": "Karina Pakule - Technology transformation team",
     "updated": "2026-08-13",
     "tags": [
-      "revops",
-      "pipeline",
-      "forecasting",
-      "risk",
-      "deals"
+      "foundation",
+      "reference",
+      "hubspot",
+      "api",
+      "formatting",
+      "write-safety"
     ]
   },
   {
-    "slug": "discovery-call-spiced-notes",
-    "title": "Discovery Call → SPICED Notes",
-    "category": "Sales / Deals",
-    "summary": "Turn messy discovery-call notes into a clean, structured SPICED summary for the CRM.",
-    "trigger": "Right after a discovery or qualification call.",
-    "inputs": "Your raw notes or transcript from the call.",
-    "owner": "Sales Enablement",
+    "slug": "hubspot-meeting-prep-checklist",
+    "title": "Meeting Prep Checklist",
+    "category": "Meeting Prep",
+    "summary": "Builds a SPICED-aligned meeting prep card from Google Calendar + HubSpot, with three targeted discovery questions.",
+    "trigger": "The morning before a meeting day, or 15 minutes before a call.",
+    "inputs": "A company/contact/deal, or an upcoming calendar event.",
+    "owner": "Karina Pakule - Technology transformation team",
     "updated": "2026-08-13",
     "tags": [
+      "meeting prep",
       "discovery",
       "spiced",
-      "crm",
+      "calendar",
+      "hubspot"
+    ]
+  },
+  {
+    "slug": "hubspot-spiced-note-structurer",
+    "title": "SPICED Call Note Structurer",
+    "category": "CRM Hygiene",
+    "summary": "Turns raw or voice-to-text call notes into a structured SPICED CRM note and logs it to the right HubSpot record.",
+    "trigger": "After every discovery or qualification call.",
+    "inputs": "Raw call notes (pasted text or voice-to-text), plus the deal/contact.",
+    "owner": "Karina Pakule - Technology transformation team",
+    "updated": "2026-08-13",
+    "tags": [
+      "crm hygiene",
+      "spiced",
       "notes",
-      "deals"
-    ]
-  },
-  {
-    "slug": "icp-fit-scoring",
-    "title": "ICP Fit Scoring",
-    "category": "Prospecting & Research",
-    "summary": "Score how well a lead or account matches your Ideal Customer Profile, with a reason for the score.",
-    "trigger": "When qualifying inbound leads or prioritising an outbound list.",
-    "inputs": "Your ICP definition and the lead/account details to score.",
-    "owner": "RevOps",
-    "updated": "2026-08-13",
-    "tags": [
-      "qualification",
-      "icp",
-      "scoring",
-      "prioritisation",
-      "revops"
-    ]
-  },
-  {
-    "slug": "linkedin-thought-leadership",
-    "title": "LinkedIn Thought-Leadership Post",
-    "category": "Marketing & Content",
-    "summary": "Draft a credible, non-salesy LinkedIn post from an idea, insight, or customer story.",
-    "trigger": "When you want to build presence or share an insight on LinkedIn.",
-    "inputs": "The core idea or story you want to share and who it's for.",
-    "owner": "Marketing",
-    "updated": "2026-08-13",
-    "tags": [
-      "content",
-      "linkedin",
-      "social",
-      "thought leadership",
-      "marketing"
-    ]
-  },
-  {
-    "slug": "pricing-objection-handling",
-    "title": "Pricing Objection Handling",
-    "category": "Pricing",
-    "summary": "Get calm, value-anchored responses to \"it's too expensive\" and other pricing pushback.",
-    "trigger": "When a prospect raises price or asks for a discount.",
-    "inputs": "The exact objection, the deal context, and your value points.",
-    "owner": "Sales Enablement",
-    "updated": "2026-08-13",
-    "tags": [
-      "pricing",
-      "objections",
-      "negotiation",
-      "value selling"
+      "discovery",
+      "hubspot"
     ]
   }
 ]

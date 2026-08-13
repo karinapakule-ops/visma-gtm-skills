@@ -20,7 +20,16 @@
       const meta = [];
       if (data.owner) meta.push(`<span><b>Owner:</b> ${data.owner}</span>`);
       if (data.updated) meta.push(`<span><b>Updated:</b> ${data.updated}</span>`);
+      if (data.connectors) meta.push(`<span><b>Connectors:</b> ${data.connectors}</span>`);
       if (data.trigger) meta.push(`<span><b>When to use:</b> ${data.trigger}</span>`);
+
+      // Installable package button, shown only when a .skill file is declared in front matter.
+      const pkgBtn = data.package
+        ? `<a class="btn btn-primary" href="${data.package}" download>Download .skill (install)</a>`
+        : '';
+      const hint = data.package
+        ? 'Download the <b>.skill</b> package to install it in Claude / Cowork, or copy the text to paste into any AI agent.'
+        : 'Copy the skill to paste into your AI agent (Claude, Copilot, ...) or download the Markdown to reuse it.';
 
       root.innerHTML = `
         <a class="backlink" href="index.html">&larr; All skills</a>
@@ -29,9 +38,10 @@
         ${data.summary ? `<p class="summary">${data.summary}</p>` : ''}
         <div class="meta-row">${meta.join('')}</div>
         <div class="action-bar">
-          <button class="btn btn-primary" id="copyBtn">Copy skill</button>
+          ${pkgBtn}
+          <button class="btn ${data.package ? 'btn-outline' : 'btn-primary'}" id="copyBtn">Copy text</button>
           <a class="btn btn-outline" id="downloadBtn" href="${file}" download="${slug}.md">Download .md</a>
-          <div class="hint">Paste the copied skill into your AI agent (Claude, Copilot, ...) or download the file to reuse it.</div>
+          <div class="hint">${hint}</div>
         </div>
         <div class="md">${renderMarkdown(body)}</div>
       `;
@@ -48,7 +58,7 @@
         }
         copyBtn.textContent = 'Copied ✓';
         copyBtn.classList.add('copied');
-        setTimeout(() => { copyBtn.textContent = 'Copy skill'; copyBtn.classList.remove('copied'); }, 2000);
+        setTimeout(() => { copyBtn.textContent = 'Copy text'; copyBtn.classList.remove('copied'); }, 2000);
       });
     })
     .catch(() => {
