@@ -1,0 +1,118 @@
+[
+  {
+    "slug": "account-research-brief",
+    "title": "Account Research Brief",
+    "category": "Prospecting & Research",
+    "summary": "Turn a company name into a structured, one-page research brief before outreach or a first call.",
+    "trigger": "Before first outreach or a discovery call with a new account.",
+    "inputs": "Company name and website; optionally the Visma product you're selling.",
+    "owner": "GTM Enablement",
+    "updated": "2026-08-13",
+    "tags": [
+      "research",
+      "prospecting",
+      "account planning",
+      "discovery"
+    ]
+  },
+  {
+    "slug": "cold-outreach-email",
+    "title": "Cold Outreach Email",
+    "category": "Outreach",
+    "summary": "Write a short, relevant first-touch cold email that earns a reply — not a pitch dump.",
+    "trigger": "When starting an outbound sequence to a new contact.",
+    "inputs": "Who you're emailing, what you sell, and one relevant reason for reaching out now.",
+    "owner": "GTM Enablement",
+    "updated": "2026-08-13",
+    "tags": [
+      "outreach",
+      "cold email",
+      "sequences",
+      "copywriting"
+    ]
+  },
+  {
+    "slug": "deal-risk-review",
+    "title": "Deal Risk Review",
+    "category": "RevOps",
+    "summary": "Assess a deal for stall and slippage risk, with reason codes and a recommended intervention.",
+    "trigger": "During pipeline reviews or before forecasting a deal as commit.",
+    "inputs": "The deal's stage, dates, activity history, and notes.",
+    "owner": "RevOps",
+    "updated": "2026-08-13",
+    "tags": [
+      "revops",
+      "pipeline",
+      "forecasting",
+      "risk",
+      "deals"
+    ]
+  },
+  {
+    "slug": "discovery-call-spiced-notes",
+    "title": "Discovery Call → SPICED Notes",
+    "category": "Sales / Deals",
+    "summary": "Turn messy discovery-call notes into a clean, structured SPICED summary for the CRM.",
+    "trigger": "Right after a discovery or qualification call.",
+    "inputs": "Your raw notes or transcript from the call.",
+    "owner": "Sales Enablement",
+    "updated": "2026-08-13",
+    "tags": [
+      "discovery",
+      "spiced",
+      "crm",
+      "notes",
+      "deals"
+    ]
+  },
+  {
+    "slug": "icp-fit-scoring",
+    "title": "ICP Fit Scoring",
+    "category": "Prospecting & Research",
+    "summary": "Score how well a lead or account matches your Ideal Customer Profile, with a reason for the score.",
+    "trigger": "When qualifying inbound leads or prioritising an outbound list.",
+    "inputs": "Your ICP definition and the lead/account details to score.",
+    "owner": "RevOps",
+    "updated": "2026-08-13",
+    "tags": [
+      "qualification",
+      "icp",
+      "scoring",
+      "prioritisation",
+      "revops"
+    ]
+  },
+  {
+    "slug": "linkedin-thought-leadership",
+    "title": "LinkedIn Thought-Leadership Post",
+    "category": "Marketing & Content",
+    "summary": "Draft a credible, non-salesy LinkedIn post from an idea, insight, or customer story.",
+    "trigger": "When you want to build presence or share an insight on LinkedIn.",
+    "inputs": "The core idea or story you want to share and who it's for.",
+    "owner": "Marketing",
+    "updated": "2026-08-13",
+    "tags": [
+      "content",
+      "linkedin",
+      "social",
+      "thought leadership",
+      "marketing"
+    ]
+  },
+  {
+    "slug": "pricing-objection-handling",
+    "title": "Pricing Objection Handling",
+    "category": "Pricing",
+    "summary": "Get calm, value-anchored responses to \"it's too expensive\" and other pricing pushback.",
+    "trigger": "When a prospect raises price or asks for a discount.",
+    "inputs": "The exact objection, the deal context, and your value points.",
+    "owner": "Sales Enablement",
+    "updated": "2026-08-13",
+    "tags": [
+      "pricing",
+      "objections",
+      "negotiation",
+      "value selling"
+    ]
+  }
+]
