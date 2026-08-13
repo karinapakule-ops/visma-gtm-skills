@@ -60,6 +60,34 @@ function renderMarkdown(src) {
       i++; continue;
     }
 
+    // Table (GitHub-style pipe table): a header row followed by a |---|---| separator
+    if (line.includes('|') && i + 1 < lines.length &&
+        /^\s*\|?\s*:?-+:?\s*(\|\s*:?-+:?\s*)*\|?\s*$/.test(lines[i + 1])) {
+      flushPara();
+      const splitRow = (row) => {
+        let s = row.trim();
+        if (s.startsWith('|')) s = s.slice(1);
+        if (s.endsWith('|')) s = s.slice(0, -1);
+        return s.split('|').map(c => c.trim());
+      };
+      const headers = splitRow(line);
+      i += 2; // skip the header and the separator line
+      const bodyRows = [];
+      while (i < lines.length && lines[i].includes('|') && lines[i].trim() !== '') {
+        bodyRows.push(splitRow(lines[i]));
+        i++;
+      }
+      let html = '<div class="table-wrap"><table><thead><tr>' +
+        headers.map(h => `<th>${inline(escapeHtml(h))}</th>`).join('') +
+        '</tr></thead><tbody>';
+      for (const r of bodyRows) {
+        html += '<tr>' + headers.map((_, ci) => `<td>${inline(escapeHtml(r[ci] || ''))}</td>`).join('') + '</tr>';
+      }
+      html += '</tbody></table></div>';
+      out.push(html);
+      continue;
+    }
+
     // Blockquote (consecutive)
     if (/^>\s?/.test(line)) {
       flushPara();
