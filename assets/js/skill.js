@@ -27,9 +27,10 @@
 
   const hint = 'Copy the skill to paste into your AI agent (Claude, Copilot, ...), or download the Markdown to read, edit, or reuse it.';
 
+  const cats = data.categories || (data.category ? [data.category] : []);
   root.innerHTML = `
     <a class="backlink" href="all-skills.html">&larr; All skills</a>
-    ${data.category ? `<div><span class="pill">${data.category}</span></div>` : ''}
+    ${cats.length ? `<div class="pills">${cats.map(c => `<span class="pill${c === 'HubSpot' ? ' pill-hubspot' : ''}">${c}</span>`).join('')}</div>` : ''}
     <h1>${data.title || slug}</h1>
     ${data.summary ? `<p class="summary">${data.summary}</p>` : ''}
     <div class="meta-row">${meta.join('')}</div>

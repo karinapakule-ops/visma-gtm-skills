@@ -173,11 +173,13 @@ a:hover { text-decoration: underline; }
   box-shadow: var(--shadow-sm); transition: transform .15s ease, box-shadow .15s ease, border-color .15s ease;
 }
 .card:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); border-color: var(--color-grey); text-decoration: none; }
+.pills { display: flex; flex-wrap: wrap; gap: 6px; align-self: flex-start; }
 .pill {
-  align-self: flex-start; font-weight: 600; font-size: 12px; letter-spacing: .2px;
+  display: inline-block; font-weight: 600; font-size: 12px; letter-spacing: .2px;
   color: var(--color-white); background: var(--color-purple);
   padding: 4px 11px; border-radius: 999px;
 }
+.pill.pill-hubspot { background: var(--color-black); }
 .card h3 { font-weight: 700; font-size: 20px; line-height: 1.25; margin: 14px 0 8px; }
 .card p { color: var(--text-muted); font-size: 15px; margin: 0 0 18px; flex-grow: 1; }
 .card .meta {

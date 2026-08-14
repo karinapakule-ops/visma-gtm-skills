@@ -1,6 +1,6 @@
 ---
 title: Account Research Brief
-category: Prospecting
+category: Prospecting, HubSpot
 summary: Builds a structured pre-call account brief by combining live HubSpot CRM data with web-search enrichment — never CRM alone.
 trigger: Before a first call, a qualification meeting, or reviving a stale account.
 inputs: A company name, HubSpot company ID, or contact name.

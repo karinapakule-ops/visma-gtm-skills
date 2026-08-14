@@ -4,7 +4,10 @@ window.SKILLS = [
   {
     "slug": "hubspot-account-research-brief",
     "title": "Account Research Brief",
-    "category": "Prospecting",
+    "categories": [
+      "Prospecting",
+      "HubSpot"
+    ],
     "summary": "Builds a structured pre-call account brief by combining live HubSpot CRM data with web-search enrichment — never CRM alone.",
     "trigger": "Before a first call, a qualification meeting, or reviving a stale account.",
     "inputs": "A company name, HubSpot company ID, or contact name.",
@@ -24,7 +27,9 @@ window.SKILLS = [
   {
     "slug": "company-context",
     "title": "Company Context (Template)",
-    "category": "Foundations",
+    "categories": [
+      "Foundations"
+    ],
     "summary": "Foundational reference holding your company's product, ICP, buyer personas, value proposition, and SPICED alignment — fill it in once per company so every skill sounds like it understands the business.",
     "trigger": "Loaded automatically before any content-generating skill (emails, briefs, prep, notes).",
     "inputs": "None — a reference skill you customise once per company.",
@@ -44,7 +49,10 @@ window.SKILLS = [
   {
     "slug": "hubspot-contact-role-mapper",
     "title": "Contact Role Mapper",
-    "category": "Prospecting",
+    "categories": [
+      "Prospecting",
+      "HubSpot"
+    ],
     "summary": "Maps every contact at an account to buying-committee roles (Champion, Economic Buyer, Technical Evaluator, Blocker, User) and flags coverage gaps.",
     "trigger": "On multi-stakeholder deals (3+ contacts), before a deal review or proposal.",
     "inputs": "A company name/ID or a deal name/ID.",
@@ -64,7 +72,10 @@ window.SKILLS = [
   {
     "slug": "hubspot-daily-action-digest",
     "title": "Daily Action Digest",
-    "category": "Productivity",
+    "categories": [
+      "Productivity",
+      "HubSpot"
+    ],
     "summary": "Pulls your open tasks, overdue activities, and stale deals and ranks them by deal value × urgency into a prioritised daily list.",
     "trigger": "First thing in the morning, or any time you want a prioritised to-do view.",
     "inputs": "None — uses your logged-in HubSpot owner (or a named rep, for managers).",
@@ -84,7 +95,10 @@ window.SKILLS = [
   {
     "slug": "hubspot-deal-summary-updater",
     "title": "Deal Summary & Next-Step Updater",
-    "category": "CRM Hygiene",
+    "categories": [
+      "CRM Hygiene",
+      "HubSpot"
+    ],
     "summary": "Reads a deal and writes a concise 3-sentence summary plus a recommended next step back to HubSpot after your confirmation.",
     "trigger": "Weekly on active deals, to keep pipeline records current.",
     "inputs": "A deal name, company name, or HubSpot deal ID.",
@@ -104,7 +118,10 @@ window.SKILLS = [
   {
     "slug": "hubspot-followup-email-generator",
     "title": "Follow-up Email Generator",
-    "category": "Outreach",
+    "categories": [
+      "Outreach",
+      "HubSpot"
+    ],
     "summary": "Drafts a personalised, SPICED-informed follow-up email from live CRM context and saves it as a sendable Gmail draft.",
     "trigger": "After a meeting, call, or touchpoint with a contact or deal.",
     "inputs": "A contact name, deal, or company that has recent CRM activity.",
@@ -124,7 +141,10 @@ window.SKILLS = [
   {
     "slug": "hs-api-best-practices",
     "title": "HubSpot API Best Practices",
-    "category": "Foundations",
+    "categories": [
+      "Foundations",
+      "HubSpot"
+    ],
     "summary": "Reference guide for writing reliable, well-formatted content to HubSpot via MCP — HTML formatting, associations, enums, timestamps.",
     "trigger": "Consulted by any skill before it writes a note, task, call, or email to HubSpot.",
     "inputs": "None — reference skill.",
@@ -144,7 +164,10 @@ window.SKILLS = [
   {
     "slug": "hubspot-meeting-prep-checklist",
     "title": "Meeting Prep Checklist",
-    "category": "Meeting Prep",
+    "categories": [
+      "Meeting Prep",
+      "HubSpot"
+    ],
     "summary": "Builds a SPICED-aligned meeting prep card from Google Calendar + HubSpot, with three targeted discovery questions.",
     "trigger": "The morning before a meeting day, or 15 minutes before a call.",
     "inputs": "A company/contact/deal, or an upcoming calendar event.",
@@ -163,7 +186,10 @@ window.SKILLS = [
   {
     "slug": "hubspot-spiced-note-structurer",
     "title": "SPICED Call Note Structurer",
-    "category": "CRM Hygiene",
+    "categories": [
+      "CRM Hygiene",
+      "HubSpot"
+    ],
     "summary": "Turns raw or voice-to-text call notes into a structured SPICED CRM note and logs it to the right HubSpot record.",
     "trigger": "After every discovery or qualification call.",
     "inputs": "Raw call notes (pasted text or voice-to-text), plus the deal/contact.",

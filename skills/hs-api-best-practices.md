@@ -1,6 +1,6 @@
 ---
 title: HubSpot API Best Practices
-category: Foundations
+category: Foundations, HubSpot
 summary: Reference guide for writing reliable, well-formatted content to HubSpot via MCP — HTML formatting, associations, enums, timestamps.
 trigger: Consulted by any skill before it writes a note, task, call, or email to HubSpot.
 inputs: None — reference skill.

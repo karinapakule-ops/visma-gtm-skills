@@ -1,6 +1,6 @@
 ---
 title: Daily Action Digest
-category: Productivity
+category: Productivity, HubSpot
 summary: Pulls your open tasks, overdue activities, and stale deals and ranks them by deal value × urgency into a prioritised daily list.
 trigger: First thing in the morning, or any time you want a prioritised to-do view.
 inputs: None — uses your logged-in HubSpot owner (or a named rep, for managers).

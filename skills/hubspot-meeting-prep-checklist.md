@@ -1,6 +1,6 @@
 ---
 title: Meeting Prep Checklist
-category: Meeting Prep
+category: Meeting Prep, HubSpot
 summary: Builds a SPICED-aligned meeting prep card from Google Calendar + HubSpot, with three targeted discovery questions.
 trigger: The morning before a meeting day, or 15 minutes before a call.
 inputs: A company/contact/deal, or an upcoming calendar event.

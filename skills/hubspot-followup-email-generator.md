@@ -1,6 +1,6 @@
 ---
 title: Follow-up Email Generator
-category: Outreach
+category: Outreach, HubSpot
 summary: Drafts a personalised, SPICED-informed follow-up email from live CRM context and saves it as a sendable Gmail draft.
 trigger: After a meeting, call, or touchpoint with a contact or deal.
 inputs: A contact name, deal, or company that has recent CRM activity.

@@ -14,18 +14,22 @@
     return name.split(/\s+/).slice(0, 2).map(w => w[0] || '').join('').toUpperCase();
   }
 
+  function catsOf(skill) {
+    return skill.categories || (skill.category ? [skill.category] : []);
+  }
+
   function matches(skill) {
-    const inCat = activeCategory === 'All' || skill.category === activeCategory;
+    const inCat = activeCategory === 'All' || catsOf(skill).includes(activeCategory);
     if (!inCat) return false;
     if (!query) return true;
-    const hay = [skill.title, skill.summary, skill.category, skill.trigger, (skill.tags || []).join(' ')]
+    const hay = [skill.title, skill.summary, catsOf(skill).join(' '), skill.trigger, (skill.tags || []).join(' ')]
       .join(' ').toLowerCase();
     return query.toLowerCase().split(/\s+/).every(t => hay.includes(t));
   }
 
   function renderFilters() {
     const counts = {};
-    skills.forEach(s => { counts[s.category] = (counts[s.category] || 0) + 1; });
+    skills.forEach(s => catsOf(s).forEach(c => { counts[c] = (counts[c] || 0) + 1; }));
     const cats = ['All', ...Object.keys(counts).sort()];
     filters.innerHTML = cats.map(cat => {
       const count = cat === 'All' ? skills.length : counts[cat];
@@ -54,7 +58,7 @@
 
     grid.innerHTML = list.map(s => `
       <a class="card" href="skill.html?slug=${encodeURIComponent(s.slug)}">
-        <span class="pill">${s.category}</span>
+        <span class="pills">${catsOf(s).map(c => `<span class="pill${c === 'HubSpot' ? ' pill-hubspot' : ''}">${c}</span>`).join('')}</span>
         <h3>${s.title}</h3>
         <p>${s.summary || ''}</p>
         <div class="meta">

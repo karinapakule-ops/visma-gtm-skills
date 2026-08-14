@@ -1,6 +1,6 @@
 ---
 title: SPICED Call Note Structurer
-category: CRM Hygiene
+category: CRM Hygiene, HubSpot
 summary: Turns raw or voice-to-text call notes into a structured SPICED CRM note and logs it to the right HubSpot record.
 trigger: After every discovery or qualification call.
 inputs: Raw call notes (pasted text or voice-to-text), plus the deal/contact.

@@ -1,6 +1,6 @@
 ---
 title: Deal Summary & Next-Step Updater
-category: CRM Hygiene
+category: CRM Hygiene, HubSpot
 summary: Reads a deal and writes a concise 3-sentence summary plus a recommended next step back to HubSpot after your confirmation.
 trigger: Weekly on active deals, to keep pipeline records current.
 inputs: A deal name, company name, or HubSpot deal ID.

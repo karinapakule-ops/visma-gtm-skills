@@ -1,6 +1,6 @@
 ---
 title: Contact Role Mapper
-category: Prospecting
+category: Prospecting, HubSpot
 summary: Maps every contact at an account to buying-committee roles (Champion, Economic Buyer, Technical Evaluator, Blocker, User) and flags coverage gaps.
 trigger: On multi-stakeholder deals (3+ contacts), before a deal review or proposal.
 inputs: A company name/ID or a deal name/ID.

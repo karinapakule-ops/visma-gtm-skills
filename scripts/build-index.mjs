@@ -38,10 +38,12 @@ for (const file of files) {
     console.warn(`⚠  ${file} has no "title" in its front matter — skipping.`);
     continue;
   }
+  const categories = (data.category || 'Uncategorised')
+    .split(',').map(c => c.trim()).filter(Boolean);
   index.push({
     slug,
     title: data.title,
-    category: data.category || 'Uncategorised',
+    categories,
     summary: data.summary || '',
     trigger: data.trigger || '',
     inputs: data.inputs || '',

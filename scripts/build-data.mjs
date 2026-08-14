@@ -38,10 +38,12 @@ for (const file of files) {
   const { data, body } = parseFrontMatter(raw);
   const slug = basename(file, '.md');
   if (!data.title) { console.warn(`skip ${file} (no title)`); continue; }
+  const categories = (data.category || 'Uncategorised')
+    .split(',').map(c => c.trim()).filter(Boolean);
   skills.push({
     slug,
     title: data.title,
-    category: data.category || 'Uncategorised',
+    categories,
     summary: data.summary || '',
     trigger: data.trigger || '',
     inputs: data.inputs || '',

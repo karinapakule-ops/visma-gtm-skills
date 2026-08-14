@@ -1,6 +1,6 @@
 ---
 title: Skill Name Here
-category: Prospecting & Research
+category: Prospecting & Research, HubSpot
 summary: One sentence describing what this skill produces. Shown on the card.
 trigger: The situation this skill is for — one line.
 inputs: What the user must supply for it to work.
