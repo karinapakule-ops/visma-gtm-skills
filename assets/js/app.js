@@ -71,6 +71,12 @@
   // so the site works on GitHub Pages regardless of Jekyll, and even from file://.
   if (Array.isArray(window.SKILLS)) {
     skills = window.SKILLS.slice().sort((a, b) => a.title.localeCompare(b.title));
+    // Prefill search from ?q= (e.g. when arriving from the home page search box).
+    const initialQuery = new URLSearchParams(location.search).get('q');
+    if (initialQuery) {
+      query = initialQuery;
+      searchInput.value = initialQuery;
+    }
     renderFilters();
     renderGrid();
   } else {

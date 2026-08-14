@@ -6,13 +6,13 @@
   const root = document.getElementById('detail');
 
   if (!slug || !/^[a-z0-9-]+$/i.test(slug)) {
-    root.innerHTML = '<a class="backlink" href="index.html">&larr; All skills</a><p>Skill not found.</p>';
+    root.innerHTML = '<a class="backlink" href="all-skills.html">&larr; All skills</a><p>Skill not found.</p>';
     return;
   }
 
   const data = Array.isArray(window.SKILLS) ? window.SKILLS.find(s => s.slug === slug) : null;
   if (!data) {
-    root.innerHTML = '<a class="backlink" href="index.html">&larr; All skills</a><p>This skill could not be found. It may have been renamed. <a href="index.html">Back to the library</a>.</p>';
+    root.innerHTML = '<a class="backlink" href="all-skills.html">&larr; All skills</a><p>This skill could not be found. It may have been renamed. <a href="all-skills.html">Back to the library</a>.</p>';
     return;
   }
 
@@ -28,7 +28,7 @@
   const hint = 'Copy the skill to paste into your AI agent (Claude, Copilot, ...), or download the Markdown to read, edit, or reuse it.';
 
   root.innerHTML = `
-    <a class="backlink" href="index.html">&larr; All skills</a>
+    <a class="backlink" href="all-skills.html">&larr; All skills</a>
     ${data.category ? `<div><span class="pill">${data.category}</span></div>` : ''}
     <h1>${data.title || slug}</h1>
     ${data.summary ? `<p class="summary">${data.summary}</p>` : ''}

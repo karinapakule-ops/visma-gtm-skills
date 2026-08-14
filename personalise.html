@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Skill · Visma GTM Skill Library</title>
+  <title>Personalise · Visma GTM Skill Library</title>
+  <meta name="description" content="How to tailor a Visma GTM skill to your company, portal, and voice before you rely on it.">
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
   <link rel="stylesheet" href="assets/css/styles.css">
 </head>
@@ -19,16 +20,34 @@
       </a>
       <div class="actions">
         <a class="nav-link" href="all-skills.html">All skills</a>
-        <a class="nav-link" href="personalise.html">Personalise</a>
+        <a class="nav-link active" href="personalise.html">Personalise</a>
         <a class="btn btn-outline" href="https://github.com/karinapakule-ops/visma-gtm-skills" target="_blank" rel="noopener">Contribute</a>
       </div>
     </div>
   </header>
 
   <main class="container">
-    <article class="detail" id="detail">
-      <p>Loading…</p>
-    </article>
+    <section class="page-head">
+      <span class="eyebrow">Before you rely on a skill</span>
+      <h1>Personalise a skill first</h1>
+      <p class="lead">These skills are validated templates, not plug-and-play. Tailor them to your company, your portal, and your voice first — a little setup is what makes the output trustworthy, not generic AI.</p>
+    </section>
+
+    <div class="callout">
+      <h3>⚙️ The five things to set up</h3>
+      <ul>
+        <li><b>Start with Company Context.</b> Fill in the <a href="skill.html?slug=company-context">Company Context</a> template with your product, ICP, buyer personas, and value proposition. Every content-generating skill (emails, briefs, prep) reads from it, so outputs sound like your business — not generic AI.</li>
+        <li><b>Add your voice.</b> Layer a personal voice/style skill so drafted emails sound like you. Tone mismatch is the fastest way to kill adoption.</li>
+        <li><b>Swap the framework if needed.</b> Using MEDDPICC or BANT instead of SPICED? Open the skill's <code>SKILL.md</code> and adjust the framework section — the structure stays the same.</li>
+        <li><b>Match your HubSpot portal.</b> Deploy <a href="skill.html?slug=hs-api-best-practices">HubSpot API Best Practices</a> first, and confirm the properties and deal stages a skill writes to actually exist in your portal.</li>
+        <li><b>Validate before production.</b> Test each skill in your own HubSpot sandbox, and pilot the write-back skills with one or two reps for a couple of weeks before rolling out widely.</li>
+      </ul>
+      <p class="tip">Recommended order: start with the read-only skills (Account Research Brief, Daily Action Digest) → deploy the Foundations skills → then pilot the write-back skills.</p>
+    </div>
+
+    <div class="cta-row cta-row-spaced">
+      <a class="btn btn-primary" href="all-skills.html">Browse all skills &rarr;</a>
+    </div>
   </main>
 
   <footer class="site-footer">
@@ -39,9 +58,5 @@
       <p>Internal skill library for Visma GTM teams · Contributions welcome via the <a href="https://github.com/karinapakule-ops/visma-gtm-skills" target="_blank" rel="noopener">repository</a>.</p>
     </div>
   </footer>
-
-  <script src="assets/js/md.js"></script>
-  <script src="assets/js/skills-data.js"></script>
-  <script src="assets/js/skill.js"></script>
 </body>
 </html>

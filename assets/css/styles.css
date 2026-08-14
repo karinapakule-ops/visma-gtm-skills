@@ -35,7 +35,7 @@ body {
   font-weight: 400;
   line-height: 1.55;
   color: var(--color-black);
-  background: var(--color-white);
+  background: var(--color-creme);
   -webkit-font-smoothing: antialiased;
 }
 
@@ -47,7 +47,7 @@ a:hover { text-decoration: underline; }
 /* ---------- Header / nav ---------- */
 .site-header {
   position: sticky; top: 0; z-index: 20;
-  background: rgba(254, 254, 254, .85);
+  background: rgba(249, 245, 241, .85);
   backdrop-filter: saturate(160%) blur(8px);
   border-bottom: 1px solid var(--color-grey-light);
 }
@@ -61,7 +61,13 @@ a:hover { text-decoration: underline; }
 .nav .brand .tag {
   font-weight: 600; font-size: 14px; letter-spacing: .2px; color: var(--color-black);
 }
-.nav .actions { display: flex; align-items: center; gap: 10px; }
+.nav .actions { display: flex; align-items: center; gap: 6px; }
+.nav-link {
+  font-weight: 600; font-size: 14px; color: var(--color-black);
+  padding: 8px 12px; border-radius: 999px; transition: background .15s, color .15s;
+}
+.nav-link:hover { text-decoration: none; color: var(--color-purple); background: var(--color-grey-light); }
+.nav-link.active { color: var(--color-purple); background: rgba(127, 86, 250, .1); }
 
 /* ---------- Buttons ---------- */
 .btn {
@@ -89,16 +95,29 @@ a:hover { text-decoration: underline; }
 }
 .hero p.lead { font-size: 18px; color: var(--text-muted); max-width: 60ch; margin: 0 0 28px; }
 
+/* Secondary page header (All skills, Personalise) */
+.page-head { padding: 48px 0 20px; }
+.page-head h1 { font-weight: 700; font-size: clamp(30px, 4.5vw, 44px); line-height: 1.1; margin: 18px 0 12px; letter-spacing: -.5px; }
+.page-head p.lead { font-size: 18px; color: var(--text-muted); max-width: 62ch; margin: 0 0 26px; }
+
+/* CTA button rows */
+.cta-row { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 26px; }
+.cta-row-spaced { margin: 28px 0 60px; }
+
+/* Compact personalise teaser on the home page */
+.callout-compact ul { display: none; }
+.callout-compact .tip a { font-weight: 600; }
+
 /* ---------- Search + filters ---------- */
 .search-wrap { position: relative; max-width: 560px; }
-.search-wrap svg { position: absolute; left: 16px; top: 50%; transform: translateY(-50%); color: var(--text-muted); }
-#search {
+.search-wrap svg { position: absolute; left: 16px; top: 50%; transform: translateY(-50%); color: var(--text-muted); pointer-events: none; }
+.search-wrap input {
   width: 100%; font-family: var(--font); font-size: 16px;
   padding: 14px 18px 14px 46px; border-radius: 999px;
   border: 1px solid var(--color-grey); background: var(--color-white);
   transition: border-color .15s, box-shadow .15s;
 }
-#search:focus { outline: none; border-color: var(--color-purple); box-shadow: 0 0 0 4px rgba(127, 86, 250, .15); }
+.search-wrap input:focus { outline: none; border-color: var(--color-purple); box-shadow: 0 0 0 4px rgba(127, 86, 250, .15); }
 
 /* ---------- Getting started / personalise ---------- */
 .intro { padding: 12px 0 4px; }
@@ -116,7 +135,7 @@ a:hover { text-decoration: underline; }
 .step p { color: var(--text-muted); font-size: 14.5px; margin: 0; }
 
 .callout {
-  background: var(--color-creme); border: 1px solid var(--color-grey-light);
+  background: var(--color-white); border: 1px solid var(--color-grey-light);
   border-left: 4px solid var(--color-purple); border-radius: var(--radius);
   padding: 22px 24px; margin: 22px 0 8px;
 }
@@ -182,7 +201,7 @@ a:hover { text-decoration: underline; }
 .detail .summary { font-size: 18px; color: var(--text-muted); margin: 0 0 20px; }
 .detail .meta-row { display: flex; flex-wrap: wrap; gap: 20px; font-size: 14px; color: var(--text-muted); margin-bottom: 24px; }
 .detail .meta-row b { color: var(--color-black); font-weight: 600; }
-.action-bar { display: flex; flex-wrap: wrap; gap: 12px; margin: 24px 0 8px; padding: 20px; background: var(--color-creme); border-radius: var(--radius); }
+.action-bar { display: flex; flex-wrap: wrap; gap: 12px; margin: 24px 0 8px; padding: 20px; background: var(--color-white); border: 1px solid var(--color-grey-light); border-radius: var(--radius); }
 .action-bar .hint { flex-basis: 100%; font-size: 13px; color: var(--text-muted); margin-top: 4px; }
 #copyBtn.copied { background: #1f9d55; }
 
