@@ -7,7 +7,6 @@ inputs: A company name/ID or a deal name/ID.
 connectors: HubSpot MCP
 owner: Karina Pakule - Technology transformation team
 updated: 2026-08-13
-package: packages/hubspot-contact-role-mapper.skill
 tags: buying committee, stakeholders, spiced, deals, coverage, hubspot
 ---
 

@@ -7,7 +7,6 @@ inputs: Raw call notes (pasted text or voice-to-text), plus the deal/contact.
 connectors: HubSpot MCP
 owner: Karina Pakule - Technology transformation team
 updated: 2026-08-13
-package: packages/hubspot-spiced-note-structurer.skill
 tags: crm hygiene, spiced, notes, discovery, hubspot
 ---
 

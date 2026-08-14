@@ -7,7 +7,6 @@ inputs: A contact name, deal, or company that has recent CRM activity.
 connectors: HubSpot MCP · Gmail MCP
 owner: Karina Pakule - Technology transformation team
 updated: 2026-08-13
-package: packages/hubspot-followup-email-generator.skill
 tags: outreach, follow-up, email, gmail, spiced, hubspot
 ---
 

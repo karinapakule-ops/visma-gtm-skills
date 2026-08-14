@@ -7,7 +7,6 @@ inputs: None — a reference skill you customise once per company.
 connectors: None (reference only)
 owner: Karina Pakule - Technology transformation team
 updated: 2026-08-13
-package: packages/company-context.skill
 tags: foundation, company context, icp, personas, value prop, spiced
 ---
 

@@ -11,7 +11,6 @@ window.SKILLS = [
     "connectors": "HubSpot MCP · Web search",
     "owner": "Karina Pakule - Technology transformation team",
     "updated": "2026-08-13",
-    "package": "packages/hubspot-account-research-brief.skill",
     "tags": [
       "research",
       "prospecting",
@@ -32,7 +31,6 @@ window.SKILLS = [
     "connectors": "None (reference only)",
     "owner": "Karina Pakule - Technology transformation team",
     "updated": "2026-08-13",
-    "package": "packages/company-context.skill",
     "tags": [
       "foundation",
       "company context",
@@ -53,7 +51,6 @@ window.SKILLS = [
     "connectors": "HubSpot MCP",
     "owner": "Karina Pakule - Technology transformation team",
     "updated": "2026-08-13",
-    "package": "packages/hubspot-contact-role-mapper.skill",
     "tags": [
       "buying committee",
       "stakeholders",
@@ -74,7 +71,6 @@ window.SKILLS = [
     "connectors": "HubSpot MCP (Native connector fallback)",
     "owner": "Karina Pakule - Technology transformation team",
     "updated": "2026-08-13",
-    "package": "packages/hubspot-daily-action-digest.skill",
     "tags": [
       "productivity",
       "tasks",
@@ -95,7 +91,6 @@ window.SKILLS = [
     "connectors": "HubSpot MCP",
     "owner": "Karina Pakule - Technology transformation team",
     "updated": "2026-08-13",
-    "package": "packages/hubspot-deal-summary-updater.skill",
     "tags": [
       "crm hygiene",
       "deals",
@@ -116,7 +111,6 @@ window.SKILLS = [
     "connectors": "HubSpot MCP · Gmail MCP",
     "owner": "Karina Pakule - Technology transformation team",
     "updated": "2026-08-13",
-    "package": "packages/hubspot-followup-email-generator.skill",
     "tags": [
       "outreach",
       "follow-up",
@@ -137,7 +131,6 @@ window.SKILLS = [
     "connectors": "HubSpot MCP",
     "owner": "Karina Pakule - Technology transformation team",
     "updated": "2026-08-13",
-    "package": "packages/hs-api-best-practices.skill",
     "tags": [
       "foundation",
       "reference",
@@ -158,7 +151,6 @@ window.SKILLS = [
     "connectors": "HubSpot MCP · Google Calendar MCP",
     "owner": "Karina Pakule - Technology transformation team",
     "updated": "2026-08-13",
-    "package": "packages/hubspot-meeting-prep-checklist.skill",
     "tags": [
       "meeting prep",
       "discovery",
@@ -178,7 +170,6 @@ window.SKILLS = [
     "connectors": "HubSpot MCP",
     "owner": "Karina Pakule - Technology transformation team",
     "updated": "2026-08-13",
-    "package": "packages/hubspot-spiced-note-structurer.skill",
     "tags": [
       "crm hygiene",
       "spiced",

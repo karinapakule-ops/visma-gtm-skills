@@ -7,7 +7,6 @@ inputs: A deal name, company name, or HubSpot deal ID.
 connectors: HubSpot MCP
 owner: Karina Pakule - Technology transformation team
 updated: 2026-08-13
-package: packages/hubspot-deal-summary-updater.skill
 tags: crm hygiene, deals, pipeline, next step, spiced, hubspot
 ---
 

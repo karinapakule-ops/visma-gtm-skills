@@ -7,7 +7,6 @@ inputs: A company/contact/deal, or an upcoming calendar event.
 connectors: HubSpot MCP · Google Calendar MCP
 owner: Karina Pakule - Technology transformation team
 updated: 2026-08-13
-package: packages/hubspot-meeting-prep-checklist.skill
 tags: meeting prep, discovery, spiced, calendar, hubspot
 ---
 

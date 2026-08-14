@@ -48,7 +48,6 @@ for (const file of files) {
     connectors: data.connectors || '',
     owner: data.owner || 'Visma GTM',
     updated: data.updated || '',
-    package: data.package || '',
     tags: (data.tags || '').split(',').map(t => t.trim()).filter(Boolean),
     body,
   });

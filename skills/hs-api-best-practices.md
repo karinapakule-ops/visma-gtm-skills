@@ -7,7 +7,6 @@ inputs: None — reference skill.
 connectors: HubSpot MCP
 owner: Karina Pakule - Technology transformation team
 updated: 2026-08-13
-package: packages/hs-api-best-practices.skill
 tags: foundation, reference, hubspot, api, formatting, write-safety
 ---
 

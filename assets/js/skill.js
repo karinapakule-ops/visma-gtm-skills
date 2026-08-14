@@ -25,13 +25,7 @@
   if (data.connectors) meta.push(`<span><b>Connectors:</b> ${data.connectors}</span>`);
   if (data.trigger) meta.push(`<span><b>When to use:</b> ${data.trigger}</span>`);
 
-  // Installable package button, shown only when a .skill file is declared for this skill.
-  const pkgBtn = data.package
-    ? `<a class="btn btn-primary" href="${data.package}" download>Download .skill (install)</a>`
-    : '';
-  const hint = data.package
-    ? 'Download the <b>.skill</b> package to install it in Claude / Cowork, or copy the text to paste into any AI agent.'
-    : 'Copy the skill to paste into your AI agent (Claude, Copilot, ...) or download the Markdown to reuse it.';
+  const hint = 'Copy the skill to paste into your AI agent (Claude, Copilot, ...), or download the Markdown to read, edit, or reuse it.';
 
   root.innerHTML = `
     <a class="backlink" href="index.html">&larr; All skills</a>
@@ -40,8 +34,7 @@
     ${data.summary ? `<p class="summary">${data.summary}</p>` : ''}
     <div class="meta-row">${meta.join('')}</div>
     <div class="action-bar">
-      ${pkgBtn}
-      <button class="btn ${data.package ? 'btn-outline' : 'btn-primary'}" id="copyBtn">Copy text</button>
+      <button class="btn btn-primary" id="copyBtn">Copy text</button>
       <button class="btn btn-outline" id="downloadBtn">Download .md</button>
       <div class="hint">${hint}</div>
     </div>

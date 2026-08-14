@@ -7,7 +7,6 @@ inputs: A company name, HubSpot company ID, or contact name.
 connectors: HubSpot MCP · Web search
 owner: Karina Pakule - Technology transformation team
 updated: 2026-08-13
-package: packages/hubspot-account-research-brief.skill
 tags: research, prospecting, account planning, discovery, hubspot, spiced
 ---
 

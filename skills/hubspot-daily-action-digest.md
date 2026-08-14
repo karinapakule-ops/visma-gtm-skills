@@ -7,7 +7,6 @@ inputs: None — uses your logged-in HubSpot owner (or a named rep, for managers
 connectors: HubSpot MCP (Native connector fallback)
 owner: Karina Pakule - Technology transformation team
 updated: 2026-08-13
-package: packages/hubspot-daily-action-digest.skill
 tags: productivity, tasks, pipeline, prioritisation, revops, hubspot
 ---
 
