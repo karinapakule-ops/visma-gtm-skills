@@ -67,14 +67,13 @@
 
   searchInput.addEventListener('input', e => { query = e.target.value; renderGrid(); });
 
-  fetch('skills.json')
-    .then(r => r.json())
-    .then(data => {
-      skills = data.sort((a, b) => a.title.localeCompare(b.title));
-      renderFilters();
-      renderGrid();
-    })
-    .catch(() => {
-      grid.innerHTML = '<div class="empty">Could not load the skill library (skills.json). If you are opening this file directly, run it through a local server or deploy to GitHub Pages.</div>';
-    });
+  // Skills are embedded in assets/js/skills-data.js (window.SKILLS) — no fetch needed,
+  // so the site works on GitHub Pages regardless of Jekyll, and even from file://.
+  if (Array.isArray(window.SKILLS)) {
+    skills = window.SKILLS.slice().sort((a, b) => a.title.localeCompare(b.title));
+    renderFilters();
+    renderGrid();
+  } else {
+    grid.innerHTML = '<div class="empty">Could not load the skill library. The data file (assets/js/skills-data.js) is missing.</div>';
+  }
 })();
