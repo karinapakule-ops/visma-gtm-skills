@@ -184,23 +184,5 @@
       "discovery",
       "hubspot"
     ]
-  },
-  {
-    "slug": "test-skill",
-    "title": "Test skill",
-    "categories": [
-      "Research",
-      "HubSpot"
-    ],
-    "summary": "This is a test skill",
-    "trigger": "The skil is to test the things",
-    "inputs": "Your personal context",
-    "owner": "Karina Pakule",
-    "updated": "2026-08-13",
-    "tags": [
-      "test",
-      "hubspot",
-      "claude"
-    ]
   }
 ]
