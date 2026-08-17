@@ -1,7 +1,12 @@
-name: Build skill index
+name: Build skill data
 
-# Whenever a skill Markdown file changes on the main branch, regenerate
-# skills.json so contributors only ever have to add/edit one Markdown file.
+# Whenever a skill Markdown file changes on the main branch, regenerate the
+# data the website loads so contributors only ever have to add/edit one
+# Markdown file in /skills — no local build step required.
+#
+# Generates BOTH:
+#   - assets/js/skills-data.js  (window.SKILLS — the file the website loads)
+#   - skills.json               (legacy index, kept in sync)
 
 on:
   push:
@@ -14,7 +19,7 @@ permissions:
   contents: write
 
 jobs:
-  build-index:
+  build-data:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -23,17 +28,19 @@ jobs:
         with:
           node-version: '20'
 
-      - name: Regenerate skills.json
-        run: node scripts/build-index.mjs
+      - name: Regenerate skill data
+        run: |
+          node scripts/build-data.mjs
+          node scripts/build-index.mjs
 
-      - name: Commit updated index
+      - name: Commit updated data
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          if ! git diff --quiet skills.json; then
-            git add skills.json
-            git commit -m "chore: rebuild skill index [skip ci]"
+          if ! git diff --quiet assets/js/skills-data.js skills.json; then
+            git add assets/js/skills-data.js skills.json
+            git commit -m "chore: rebuild skill data [skip ci]"
             git push
           else
-            echo "skills.json already up to date."
+            echo "Skill data already up to date."
           fi
