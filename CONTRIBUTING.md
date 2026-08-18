@@ -1,7 +1,8 @@
 # Contributing a skill
 
 Adding a skill is **one Markdown file**. No coding required — you can do it entirely in
-the GitHub website.
+the GitHub website. **Anyone with a GitHub account can contribute** — you don't need to be
+given any special access.
 
 ## Add a skill (in the browser)
 
@@ -12,12 +13,27 @@ the GitHub website.
    it short and stable.
 4. Copy the contents of [`skills/_template.md`](skills/_template.md) into the file and fill
    it in.
-5. Click **Commit changes**. GitHub will offer to **create a new branch and start a pull
-   request** — choose that and click **Propose changes**.
+5. Click **Commit changes**, then **Propose changes**.
 
-Your change now waits as a **pull request** for review. Once it's approved and merged, the
-site rebuilds automatically and your skill appears within a minute or two. You can only add
-or edit files inside `skills/` — that's by design, so a stray edit can't break the site.
+### What you'll see when you propose
+
+- **If you don't have write access** (most people), GitHub shows a banner saying it will
+  **create a fork** — your own copy of the repo — to hold your change. That's normal and
+  expected; just click through it. Your edit lands in your fork and opens a **pull request**
+  back to this project.
+- **If you're a collaborator**, GitHub instead offers to **create a new branch** in this repo.
+  Choose that — it opens a pull request too, just without the fork step.
+
+Either way, your change now waits as a **pull request** for review. Once it's approved and
+merged, the site rebuilds automatically and your skill appears within a minute or two.
+
+> **Heads-up for first-time contributors:** the very first time you open a pull request, a
+> maintainer has to click **Approve** before the automated checks run. This is a one-time
+> spam guard — nothing is wrong with your change.
+
+You can only add or edit files inside `skills/` — that's by design, so a stray edit can't
+break the site. A check called **`only-skills`** will fail your pull request if it touches
+anything else.
 
 ## The front matter (the block at the top between `---` lines)
 
