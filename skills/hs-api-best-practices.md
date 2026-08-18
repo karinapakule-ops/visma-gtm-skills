@@ -175,7 +175,7 @@ Always set `hubspot_owner_id` on engagements and tasks. Without it, the activity
 
 Use `search_owners` to find the correct owner ID by name or email before writing:
 ```
-search_owners(query="Karina")
+search_owners(query="...")
 ```
 
 For tasks, the owner is also the assignee — if the task is for a specific rep, use their ID, not the admin's.
