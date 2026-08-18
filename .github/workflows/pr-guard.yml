@@ -1,8 +1,10 @@
 name: PR guard
 
-# Enforces that a pull request only adds or edits files inside the skills/
-# folder. Wire this up as a REQUIRED status check on main (Settings -> Rules)
-# so a PR that touches anything else cannot be merged by a contributor.
+# Enforces two rules on every pull request:
+#   1. It only adds or edits files inside the skills/ folder.
+#   2. Every new or edited skill declares a real `owner:` (not blank, not the template placeholder).
+# Wire this up as a REQUIRED status check on main (Settings -> Rules) so a PR that
+# breaks either rule cannot be merged by a contributor.
 # Repository admins on the ruleset bypass list are unaffected.
 
 on:
@@ -36,3 +38,29 @@ jobs:
             exit 1
           fi
           echo "OK: every change is inside skills/."
+
+      - name: Require an owner on new or edited skills
+        run: |
+          base="${{ github.event.pull_request.base.sha }}"
+          head="${{ github.event.pull_request.head.sha }}"
+          # New or edited (not deleted) Markdown skills, excluding the _template.
+          skills=$(git diff --name-only --diff-filter=d "$base" "$head" -- skills \
+            | grep -E '\.md$' | grep -v '^skills/_' || true)
+          placeholder="your team or name"
+          missing=""
+          for f in $skills; do
+            # Read only the YAML front matter (between the first two --- fences).
+            fm=$(awk 'NR==1 && /^---[[:space:]]*$/{inb=1; next} inb && /^---[[:space:]]*$/{exit} inb{print}' "$f")
+            owner=$(printf '%s\n' "$fm" | grep -E '^owner:' | head -1 | sed -E 's/^owner:[[:space:]]*//; s/[[:space:]]+$//')
+            lc=$(printf '%s' "$owner" | tr '[:upper:]' '[:lower:]')
+            if [ -z "$owner" ] || [ "$lc" = "$placeholder" ]; then
+              missing="$missing $f"
+            fi
+          done
+          if [ -n "$missing" ]; then
+            echo "::error::These skills need a real 'owner:' (it is blank or still the template placeholder 'Your team or name'):"
+            for m in $missing; do echo "  - $m"; done
+            echo "Set 'owner:' to your team or name so people know who to ask."
+            exit 1
+          fi
+          echo "OK: every new or edited skill declares a real owner."

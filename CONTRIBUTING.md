@@ -7,13 +7,13 @@ given any special access.
 ## Add a skill (in the browser)
 
 1. Go to the `skills/` folder in this repository.
-2. Click **Add file → Create new file**.
-3. Name it with lowercase words and hyphens, ending in `.md` — e.g.
+2. Open the [`_template.md`](skills/_template.md) file there and copy its contents.
+3. Back in `skills/`, click **Add file → Create new file**.
+4. Name it with lowercase words and hyphens, ending in `.md` — e.g.
    `competitor-battlecard.md`. **This filename becomes the skill's web address**, so keep
    it short and stable.
-4. Copy the contents of [`skills/_template.md`](skills/_template.md) into the file and fill
-   it in.
-5. Click **Commit changes**, then **Propose changes**.
+5. Paste in the template and fill it in.
+6. Click **Commit changes**, then **Propose changes**.
 
 ### What you'll see when you propose
 
@@ -33,7 +33,8 @@ merged, the site rebuilds automatically and your skill appears within a minute o
 
 You can only add or edit files inside `skills/` — that's by design, so a stray edit can't
 break the site. A check called **`only-skills`** will fail your pull request if it touches
-anything else.
+anything else, **or if a new or edited skill has no real `owner`** (blank, or left as the
+template's `Your team or name` placeholder).
 
 ## The front matter (the block at the top between `---` lines)
 
@@ -44,7 +45,7 @@ anything else.
 | `summary`  | Yes      | One sentence shown on the card.                              |
 | `trigger`  | No       | "When to use" — one line.                                    |
 | `inputs`   | No       | What the user must supply.                                   |
-| `owner`    | No       | Your team or name — so people know who to ask.               |
+| `owner`    | **Yes**  | Your team or name — so people know who to ask. Enforced on PRs. |
 | `updated`  | No       | Date you last touched it (YYYY-MM-DD).                       |
 | `tags`     | No       | Comma-separated keywords; they feed search.                  |
 
@@ -52,15 +53,19 @@ Keep values on a single line. Don't remove the `---` fences.
 
 ## Current categories
 
-Prospecting & Research · Outreach · Sales / Deals · RevOps · Marketing & Content · Pricing
+Prospecting · Outreach · Meeting Prep · CRM Hygiene · Productivity · Foundations
+
+A skill can sit in **more than one** category — separate them with commas
+(e.g. `category: Prospecting, HubSpot`). Add **`HubSpot`** as a second category on any skill
+that uses the HubSpot connector.
 
 Add a new category only when you have a skill that genuinely doesn't fit — just type it in
 the `category` field and it will appear as a new filter.
 
 ## Writing a good skill
 
-- The **The skill** code block is the payload — write it as instructions an AI agent can
-  follow, with `{{placeholders}}` for the user's inputs.
+- The code block under **The skill** is the payload — write it as instructions an AI agent
+  can follow, with `{{placeholders}}` for the user's inputs.
 - Tell the agent **not to invent facts**; GTM work needs accuracy.
 - Keep it self-contained: someone should be able to copy it and use it without reading
   anything else.

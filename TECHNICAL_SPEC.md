@@ -129,7 +129,7 @@ tags: research, prospecting, discovery
 | `trigger` | string | front matter | detail "When to use" |
 | `inputs` | string | front matter | (available; reference) |
 | `connectors` | string | front matter | detail metadata |
-| `owner` | string | front matter (defaults to `Visma GTM`) | card avatar + detail |
+| `owner` | string | front matter (**required** on new/edited skills — see §13; builder falls back to `Visma GTM`) | card avatar + detail |
 | `updated` | string (YYYY-MM-DD) | front matter | detail metadata |
 | `tags` | string[] | front matter (comma-split) | search |
 | `body` | string (Markdown) | everything after front matter | rendered on detail page, copied, downloaded |
@@ -316,9 +316,11 @@ Contributions are open, but nothing reaches the live site without maintainer rev
 - **`main` is protected** by a repository ruleset: a pull request with **1 approval** is
   required before merging; direct pushes and force-pushes to `main` are blocked. The
   repository admin (owner) is on the ruleset **bypass list** for fixes.
-- **Path restriction** — the required **`only-skills`** status check (`pr-guard.yml`) fails
-  any PR that changes files outside `skills/`. Contributors can therefore only add or edit
-  skill Markdown, never site code or config.
+- **Path restriction & required fields** — the required **`only-skills`** status check
+  (`pr-guard.yml`) fails any PR that changes files outside `skills/`, **or that adds/edits a
+  skill without a real `owner:`** (blank, or the unedited `Your team or name` placeholder).
+  Contributors can therefore only add or edit skill Markdown, never site code or config, and
+  every skill has a named owner.
 - **Who can contribute** — the repo is public, so **anyone with a GitHub account** can open a
   PR (GitHub auto-forks for users without write access). Named **collaborators (Write)** get
   the smoother branch-based flow and can be granted review duties.
