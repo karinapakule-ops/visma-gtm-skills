@@ -1,0 +1,38 @@
+name: PR guard
+
+# Enforces that a pull request only adds or edits files inside the skills/
+# folder. Wire this up as a REQUIRED status check on main (Settings -> Rules)
+# so a PR that touches anything else cannot be merged by a contributor.
+# Repository admins on the ruleset bypass list are unaffected.
+
+on:
+  pull_request:
+    branches: [ main ]
+
+permissions:
+  contents: read
+
+jobs:
+  only-skills:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Ensure the PR only changes files in skills/
+        run: |
+          base="${{ github.event.pull_request.base.sha }}"
+          head="${{ github.event.pull_request.head.sha }}"
+          files=$(git diff --name-only "$base" "$head")
+          echo "Files changed in this pull request:"
+          echo "$files"
+          echo "---"
+          outside=$(echo "$files" | grep -v '^skills/' || true)
+          if [ -n "$outside" ]; then
+            echo "::error::This pull request changes files outside the skills/ folder:"
+            echo "$outside" | sed 's/^/  - /'
+            echo "Contributors may only add or edit files inside skills/."
+            exit 1
+          fi
+          echo "OK: every change is inside skills/."

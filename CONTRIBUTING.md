@@ -12,10 +12,12 @@ the GitHub website.
    it short and stable.
 4. Copy the contents of [`skills/_template.md`](skills/_template.md) into the file and fill
    it in.
-5. Click **Commit changes**.
+5. Click **Commit changes**. GitHub will offer to **create a new branch and start a pull
+   request** — choose that and click **Propose changes**.
 
-That's it. Within a minute or two the skill index rebuilds automatically and your skill
-appears on the site.
+Your change now waits as a **pull request** for review. Once it's approved and merged, the
+site rebuilds automatically and your skill appears within a minute or two. You can only add
+or edit files inside `skills/` — that's by design, so a stray edit can't break the site.
 
 ## The front matter (the block at the top between `---` lines)
 
@@ -49,5 +51,10 @@ the `category` field and it will appear as a new filter.
 
 ## Editing or removing a skill
 
-- **Edit:** open the file, click the pencil icon, change it, commit. The index rebuilds.
-- **Remove:** delete the `.md` file. The index rebuilds and it disappears from the site.
+- **Edit:** open the file, click the pencil icon, change it, and **Propose changes** to open
+  a pull request. Once it's reviewed and merged, the index rebuilds.
+- **Remove:** delete the `.md` file the same way (via a pull request). After it's merged, the
+  index rebuilds and the skill disappears from the site.
+
+Every change goes through a quick review before it's live — nothing publishes to the site
+until the pull request is approved.
